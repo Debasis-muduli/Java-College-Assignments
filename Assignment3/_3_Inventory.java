@@ -8,15 +8,20 @@ public class _3_Inventory {
         System.out.println("Store Inventory");
         System.out.printf("%-15s%-15s%-15s%-20s\n", "Name", "Price", "Quantity", "Value");
 
-        for (item item : Items) {
-            displayItemDetails(item);
+        // for (item item : Items) {
+        //     displayItemDetails(item);
+        // }
+        for (int i = 0; i < Items.length; i++) {
+            displayItemDetails(Items[i]);
         }
 
         double totalInventoryValue = 0;
-        for (item item : Items) {
-            totalInventoryValue += item.getValue();
+        // for (item item : Items) {
+        //     totalInventoryValue += item.getValue();
+        // }
+        for (int i = 0; i < Items.length; i++) {
+            totalInventoryValue += Items[i].getValue();
         }
-
         System.out.printf("Total Inventory Value:" + totalInventoryValue);
     }
 
