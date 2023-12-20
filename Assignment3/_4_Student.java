@@ -45,7 +45,6 @@ public class _4_Student {
     }
 
     public static void main(String[] args) {
-        // Example usage
         _4_Student student1 = new _4_Student("John", 90, 80, 'B');
         _4_Student student2 = new _4_Student("Alice", 95, 80, 'A');
 
