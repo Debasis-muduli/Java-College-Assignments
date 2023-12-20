@@ -27,8 +27,8 @@ class Employee {
 
 public class _2_showEmployee {
     public static void main(String[] args) {
-        Employee emp1 = new Employee("Saurav", 101, 50000);
-        Employee emp2 = new Employee("Bharat", 102, 60000);
+        Employee emp1 = new Employee("Emp1", 101, 50000);
+        Employee emp2 = new Employee("Emp2", 102, 60000);
 
         emp1.calGrossSal();
         emp2.calGrossSal();
