@@ -1,3 +1,9 @@
+/*Create a class Student having data members name, roll and address. Note that address is an
+object of inner class Address having data members city and pin. Create some student class
+objects. Read, store (using constructor) and display their information. While creating the
+objects your program should display a message “Creating student number n” from the
+constructor. You can get the value of n by using a static member of Student class which is
+initialized to 0. */
 public class Student {
     String name;
     int roll;
@@ -22,10 +28,10 @@ public class Student {
 
     public static void main(String[] args) {
         System.out.println("Creating student number " + studentCount);
-        Student student1 = new Student("A", 101, "City1", 751006);
+        Student student1 = new Student("A", 101, "City1", 751116);
 
         System.out.println("Creating student number " + studentCount);
-        Student student2 = new Student("B", 102, "City2", 751004);
+        Student student2 = new Student("B", 102, "City2", 751044);
 
         student1.displayInformation();
         student2.displayInformation();
