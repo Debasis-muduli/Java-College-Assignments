@@ -5,11 +5,11 @@ class SquareThread extends Thread {
         this.number = number;
     }
 
-    @Override
+@Override
     public void run() {
         int square = number * number;
         System.out.println("Thread 1: Square of " + number + " is " + square);
-        //  try {
+//  try {
         //     Thread.sleep(1000);
         // } catch (InterruptedException e) {
         //     e.printStackTrace();
@@ -24,7 +24,7 @@ class DigitSumThread extends Thread {
         this.square = square;
     }
 
-    @Override
+@Override
     public void run() {
          try {
             Thread.sleep(100);
