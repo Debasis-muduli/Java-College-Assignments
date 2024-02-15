@@ -2,29 +2,25 @@
 
 import java.util.Scanner;
 
-public class sum_3 {
+public class sum_3 extends Thread {
     static int[] numbers;
     static int sum;
     static int p;
+    int start;
+    int end;
 
-    // Thread class to compute sum of a portion of the array
-    static class SumThread extends Thread {
-        int start;
-        int end;
+    public sum_3(int start, int end) {
+        this.start = start;
+        this.end = end;
+    }
 
-        public SumThread(int start, int end) {
-            this.start = start;
-            this.end = end;
+    public void run() {
+        int localSum = 0;
+        for (int i = start; i < end; i++) {
+            localSum += numbers[i];
         }
-
-        public void run() {
-            int localSum = 0;
-            for (int i = start; i < end; i++) {
-                localSum += numbers[i];
-            }
-            synchronized (this) {
-                sum += localSum;
-            }
+        synchronized (this) {
+            sum += localSum;
         }
     }
 
@@ -34,7 +30,7 @@ public class sum_3 {
         int n = sc.nextInt();
         System.out.print("Enter the number of threads (p): ");
         p = sc.nextInt();
-        
+
         // Create an array of n elements
         numbers = new int[n];
         for (int i = 0; i < n; i++) {
@@ -42,10 +38,10 @@ public class sum_3 {
         }
 
         // Create and start p threads
-        Thread[] threads = new Thread[p];
+        sum_3[] threads = new sum_3[p];
         for (int i = 0; i < p; i++) {
-            // Create a SumThread for the range of elements for each thread
-            threads[i] = new SumThread(i * (n / p), (i + 1) * (n / p));
+            // Create a sum_3 for the range of elements for each thread
+            threads[i] = new sum_3(i * (n / p), (i + 1) * (n / p));
             // Start the thread
             threads[i].start();
         }
