@@ -16,16 +16,12 @@ public class _5_ques {
         System.out.println("You have withdrawn your amount.");
       }
     }catch(FundException ob){
-      System.out.println("Exception occured:"+ob);
+      System.out.println(ob);
     }
   }
 }
 class FundException extends Exception{
-  String str;
   FundException(String st){
-    str=st;
-  }
-  public String toString(){
-    return str;
+    super(st);
   }
 }

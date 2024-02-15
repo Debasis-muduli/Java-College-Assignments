@@ -19,7 +19,7 @@ public class _2_ques {
             break;
             }
             catch(ArithmeticException ob){
-                System.out.println(ob);
+                System.out.println(ob.getMessage());
             }
         }
 

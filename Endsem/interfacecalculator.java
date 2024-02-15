@@ -22,7 +22,7 @@ class DemoCalculator implements Calculator {
     }
 }
 
-public class _2_calculator {
+public class interfacecalculator {
     public static void main(String[] args) {
         DemoCalculator calculator = new DemoCalculator();
         System.out.println();
