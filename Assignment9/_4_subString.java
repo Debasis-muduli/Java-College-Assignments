@@ -12,6 +12,7 @@ public class _4_subString {
         findAllSubstrings(inputString);
 
         scanner.close();
+
     }
 
     static void findAllSubstrings(String str) {
